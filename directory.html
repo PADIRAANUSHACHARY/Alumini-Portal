@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Alumni Directory</title>
+  <style>
+    h1 {
+      margin-top: 20px;
+      text-align: center;
+      color: #636a34;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="title-dashboard1">Alumni Portal Dashboard</div>
+    <nav class="menu">
+      <a href="dashboard.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="directory.html">Alumni Directory</a>
+      <a href="events.html">Events</a>
+      <a href="jobs.html">Job Board</a>
+      <a href="forum.html">Community Forum</a>
+      <a href="profie.html">Profile Settings</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <h1>Alumni Directory</h1>
+
+  <div class="directory-container">
+    <input type="text" id="searchInput" placeholder="Search alumni..." title="Type to search" />
+
+    <table id="alumniTable">
+      <thead>
+        <tr>
+          <th>Profile</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Current Company</th>
+          <th>Job Title</th>
+          <th>Location</th>
+          <th>Social Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell">
+            <img class="profile-pic" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Anusha DBS" />
+          </td>
+          <td>Anusha DBS</td>
+          <td><a class="email-link" href="mailto:anusha@dbs.com">anusha@dbs.com</a></td>
+          <td>DBS Technologies</td>
+          <td>Software Engineer</td>
+          <td>Hyderabad, India</td>
+          <td class="social-links">
+            <a href="https://linkedin.com/in/anusha" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/anusha" target="_blank">Twitter</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="name-cell">
+            <img class="profile-pic" src="https://thumbs.dreamstime.com/b/portrait-young-business-woman-working-her-office-beautiful-61643865.jpg" alt="Pallavi K" />
+          </td>
+          <td>Pallavi K</td>
+          <td><a class="email-link" href="mailto:pallavi@dbs.com">pallavi@dbs.com</a></td>
+          <td>DBS Technologies</td>
+          <td>Product Manager</td>
+          <td>Bangalore, India</td>
+          <td class="social-links">
+            <a href="https://linkedin.com/in/pallavi" target="_blank">LinkedIn</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="name-cell">
+            <img class="profile-pic" src="https://img.freepik.com/premium-photo/portrait-handsome-smiling-middle-aged-businessman-wearing-suit-looking-camera_116547-29722.jpg" alt="Prasad Reddy" />
+          </td>
+          <td>Prasad Reddy</td>
+          <td><a class="email-link" href="mailto:prasad@dbs.com">prasad@dbs.com</a></td>
+          <td>DBS Technologies</td>
+          <td>AI Specialist</td>
+          <td>Chennai, India</td>
+          <td class="social-links">
+            <a href="https://linkedin.com/in/prasad" target="_blank">LinkedIn</a>
+            <a href="https://facebook.com/prasad" target="_blank">Facebook</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="name-cell">
+            <img class="profile-pic" src="https://tse3.mm.bing.net/th/id/OIP.fvvg0Bfwct6OyfVzEgMWRAHaJQ?pid=Api&P=0&h=180" alt="Karthik" />
+          </td>
+          <td>Karthik Sharma</td>
+          <td><a class="email-link" href="mailto:pallavi@dbs.com">karthik@dbs.com</a></td>
+          <td>DBS Technologies</td>
+          <td>SaaS Manager</td>
+          <td>Bangalore, India</td>
+          <td class="social-links">
+            <a href="https://linkedin.com/in/karthik" target="_blank">LinkedIn</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="name-cell">
+            <img class="profile-pic" src="https://i.pinimg.com/originals/bd/ae/c7/bdaec7bd1ee15af5ae13698a1ba4ed84.jpg" alt="Bhavani S" />
+          </td>
+          <td>Bhavani S</td>
+          <td><a class="email-link" href="mailto:pallavi@dbs.com">bhavani@dbs.com</a></td>
+          <td>DBS Technologies</td>
+          <td>Cyber Security Specialist</td>
+          <td>Pune, India</td>
+          <td class="social-links">
+            <a href="https://linkedin.com/in/bhavani" target="_blank">LinkedIn</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>© 2025 DBS Company. All rights reserved.</p>
+    <p>1234 Elm St, Suite 567, Your City, State ZIP</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" class="fa fa-facebook"></a>
+      <a href="https://twitter.com" class="fa fa-twitter"></a>
+      <a href="https://linkedin.com" class="fa fa-linkedin"></a>
+      <a href="https://instagram.com" class="fa fa-instagram"></a>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const table = document.getElementById('alumniTable');
+    const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+    searchInput.addEventListener('keyup', function () {
+      const filter = this.value.toLowerCase();
+
+      Array.from(rows).forEach(row => {
+        const rowText = row.textContent.toLowerCase();
+        if (rowText.indexOf(filter) > -1) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

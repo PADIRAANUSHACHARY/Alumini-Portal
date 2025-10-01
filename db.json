@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "anusha@dbs.com",
+      "password": "password123D@",
+      "fullname": "Anusha DBS",
+      "phone": "9876543210",
+      "bio": "Passionate software engineer with expertise in AI and cloud computing. Dedicated to creating scalable healthcare solutions and mentoring aspiring developers."
+    },
+    {
+      "id": 2,
+      "email": "pallavi@dbs.com",
+      "password": "securepass12W",
+      "fullname": "Pallavi K",
+      "phone": "9123456789",
+      "bio": "Experienced product manager combining technical skills and user empathy to deliver impactful digital products. Advocate for women in tech and community building."
+    },
+    {
+      "id": 3,
+      "email": "prasad@dbs.com",
+      "password": "securepass12W",
+      "fullname": "Prasad Reddy",
+      "phone": "9988776655",
+      "bio": "Data scientist specializing in real-time analytics and machine learning. Published researcher and active contributor to open-source AI projects."
+    },
+    {
+      "id": 4,
+      "email": "karthik@dbs.com",
+      "password": "securepass12W",
+      "fullname": "Karthik Sharma",
+      "phone": "9871234560",
+      "bio": "Entrepreneur and technology leader with a focus on SaaS platforms. Committed to fostering innovation and creating startup ecosystems."
+    },
+    {
+      "id": 5,
+      "email": "bhavani@dbs.com",
+      "password": "securepass12W",
+      "fullname": "Bhavani S",
+      "phone": "9012345678",
+      "bio": "Cybersecurity specialist focused on threat analysis and risk mitigation. Speaker at industry conferences and mentor for aspiring security professionals."
+    },
+    {
+      "id": 6,
+      "email": "anuradha@dbs.com",
+      "password": "securepass12W",
+      "fullname": "Anuradha M",
+      "phone": "9162738450",
+      "bio": "AI researcher exploring natural language processing and its applications in education technology. Advocate for ethical AI practices."
+    }
+  ]
+}
